@@ -17,13 +17,15 @@ public class Navigation {
 
         driver.navigate().back();
         String googleTitleAfter=driver.getTitle();
-        System.out.println("Verification of Google Title:");
+        System.out.println("Verification of Google Title with Browser "+browser+" =");
         StringUtility.verifyEquals(googleTitleBefore,googleTitleAfter);
 
         driver.navigate().forward();
         String etsyTitleAfter=driver.getTitle();
-        System.out.println("Verification of Etsy Title: ");
+        System.out.println("Verification of Etsy Title with Browser "+browser+" =");
         StringUtility.verifyEquals(etsyTitleBefore,etsyTitleAfter);
+
+        driver.close();
 
 
 
